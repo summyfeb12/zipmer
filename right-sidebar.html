@@ -9,8 +9,10 @@
 		<title>Right Sidebar - Arcana by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet/less" type="text/css" href="assets/css/styles.less" />
+
 		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -51,7 +53,7 @@
 							</div> -->
 							<div class="row 200%">
 
-										<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24413.934038824395!2d-88.21969005!3d40.103470349999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1455952753664" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										<div id="map"> </div>
 
 									<!-- <div id="sidebar"> -->
 
@@ -59,15 +61,15 @@
 										<div class="machinery">
 											<div class="machine-heading">Available Machinery</div>
 											<ul class="machine-list">
-												<li><label><input type="checkbox" name="checkbox" value="value">Tractor</label></li>
-												<li><label><input type="checkbox" name="checkbox" value="value">Grain Drill</label></li>
-												<li><label><input type="checkbox" name="checkbox" value="value">Planter</label></li>
-												<li><label><input type="checkbox" name="checkbox" value="value">Combine</label></li>
-												<li><label><input type="checkbox" name="checkbox" value="value">Cultivator</label></li>
-												<li><label><input type="checkbox" name="checkbox" value="value">Harrow</label></li>
-												<li><label><input type="checkbox" name="checkbox" value="value">Potato Planter</label></li>
-												<li><label><input type="checkbox" name="checkbox" value="value">Sprayer</label></li>
-												<li><label><input type="checkbox" name="checkbox" value="value">Sorter</label></li>
+												<li><label><input type="checkbox" name="machinetype" value="tractor" id="tractor">Tractor</label><div class="tractor-icon"></div></li>
+												<li><label><input type="checkbox" name="machinetype" value="graindrill" id="graindrill">Grain Drill</label><div class="grain-icon"></div></li>
+												<li><label><input type="checkbox" name="machinetype" value="planter" id="planter">Planter</label><div class="planter-icon"></div></li>
+												<li><label><input type="checkbox" name="machinetype" value="combine" id="combine">Combine</label><div class="combine-icon"></div></li>
+												<li><label><input type="checkbox" name="machinetype" value="cultivator" id="cultivator">Cultivator</label><div class="cultivator-icon"></div></li>
+												<li><label><input type="checkbox" name="machinetype" value="harrow" id="harrow">Harrow</label><div class="harrow-icon"></div></li>
+												<li><label><input type="checkbox" name="machinetype" value="potatoplanter" id="potato">Potato Planter</label><div class="potato-icon"></div></li>
+												<li><label><input type="checkbox" name="machinetype" value="sprayer" id="sprayer">Sprayer</label><div class="sprayer-icon"></div></li>
+												<li><label><input type="checkbox" name="machinetype" value="sorter" id="sorter">Sorter</label><div class="sorter-icon"></div></li>
 											</ul>
 											<!-- <button class="checkout-button">CHECKOUT!</button> -->
 										</div>
@@ -79,14 +81,29 @@
 				</section>
 
 		</div>
-
+	
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/ui.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$("#map").css("height", $(window).height());
+			$("#map").css("width", "75%");
+		</script>
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+   		<script src="http://d3js.org/d3.v3.min.js"></script>
+   		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
+		<!-- sha256 -->
+		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js"></script>
+
+		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+		<script src="assets/js/ui.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/oauth-1.0a.js"></script>
+		<script src="assets/js/xml2json.js"></script>
+		<script src="assets/js/field.js"></script>
+		<script src="assets/js/machines.js"></script>
 	</body>
 </html>
