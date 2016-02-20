@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet/less" type="text/css" href="assets/css/styles.less" />
 
-		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+		<script src="assets/js/less.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -81,20 +81,37 @@
 				</section>
 
 		</div>
-	
+		<div class="popup-outer">
+			<img class="card-image" src="https://www.deere.com/common/media/images/product/tractors/r4d042782_8Rtractor_762x458.jpg" />
+			<div class="price">$7000</div>
+			<div class="user-image"><img src="users/um3.jpg" align="middle"/></div>
+			<div class="user-name">Danish Sait</div>
+			<div class="mech-desc">Hey there, I'm willing to lend my machinery for the specified dates. Call me on <a>(312)-874-9091</a>.</div>
+			<div class="date">
+				<div class="from-date">
+					<div class="from-text">Available From</div>
+					<div class="date-text" id="fromDate">MAR 13</div>
+				</div>
+				<div class="to-date">
+					<div class="to-text">Available Till	</div>
+					<div class="date-text" id="toDate">MAR 20</div>
+				</div>
+			</div>
+			<button class="checkout-button">CHECKOUT!</button>
+		</div>
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script type="text/javascript">
 			$("#map").css("height", $(window).height());
 			$("#map").css("width", "75%");
 		</script>
-		<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-   		<script src="http://d3js.org/d3.v3.min.js"></script>
-   		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
+		<script src="assets/js/leaflet.js"></script>
+   		<script src="assets/js/d3.js"></script>
+   		<script src="assets/js/hmac-sha1.js"></script>
 		<!-- sha256 -->
-		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js"></script>
+		<script src="assets/js/hmac-sha256.js"></script>
 
-		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+		<script src="assets/js/enc-base64-min.js"></script>
 		<script src="assets/js/ui.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>
 		<script src="assets/js/skel.min.js"></script>
@@ -105,5 +122,6 @@
 		<script src="assets/js/xml2json.js"></script>
 		<script src="assets/js/field.js"></script>
 		<script src="assets/js/machines.js"></script>
+		<div class="popup-grey"></div>
 	</body>
 </html>

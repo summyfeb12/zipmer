@@ -1,4 +1,4 @@
-        var map = L.map('map').setView([41.6,-93.0167], 8);
+        var map = L.map('map').setView([41.6,-91.8167], 8);
         
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
             maxZoom: 18,
@@ -24,7 +24,7 @@ console.log(a);
   
   var tractorIcon = L.icon({
      iconUrl: 'images/tractor.png',
-
+     clickable: 'true',
      iconSize:     [48, 48], // size of the icon
      iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
@@ -88,24 +88,60 @@ console.log(a);
 
   //map elements
   var tr = L.layerGroup([]);
-  tractordata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: tractorIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(tr);});
+  tractordata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: tractorIcon}).addTo(tr).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
   var gd = L.layerGroup([]);
-  graindrilldata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: grainIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(gd);}); 
+  graindrilldata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: grainIcon}).addTo(gd).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
   var culd = L.layerGroup([]); 
-  cultivatordata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: cultivatorIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(culd);});
+  cultivatordata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: cultivatorIcon}).addTo(culd).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
   var spd = L.layerGroup([]); 
-  sprayerdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: sprayerIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(spd);});
+  sprayerdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: sprayerIcon}).addTo(spd).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
   var sord = L.layerGroup([]); 
-  sorterdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: sorterIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(sord);});
+  sorterdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: sorterIcon}).addTo(sord).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
      
   var pld = L.layerGroup([]);
-     planterdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: planterIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(pld);});
+     planterdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: planterIcon}).addTo(pld).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
   var hd = L.layerGroup([]);
-     harrowdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: harrowIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(hd);});
+     harrowdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: harrowIcon}).addTo(hd).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
   var potpld = L.layerGroup([]);
-     potplanterdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: potatoIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(potpld);});
+     potplanterdata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: potatoIcon}).addTo(potpld).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
   var comd = L.layerGroup([]); 
-      combinedata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: combineIcon}).bindPopup(d.name + d.owner +d.crops+d.description+d.availableFrom+d.availableTo).addTo(comd);});
+      combinedata.forEach(function(d){L.marker([d.latitude, -d.longitude], {icon: combineIcon}).addTo(comd).on('click',function(){
+    $(".popup-outer").addClass("show");
+    $(".popup-grey").addClass("show");
+    changePopupDetails(d.availableFrom,d.availableTo,d.name);
+  });});
 
   var overlayMaps = {
     "<div id='tractorID'>Tractor</div>": tr,
@@ -148,4 +184,10 @@ console.log(a);
       if($('#planter').is(':checked')){map.addLayer(pld);}
       if(!$('#planter').is(':checked')){map.removeLayer(pld);}
   });
- });  
+ }); 
+
+ function changePopupDetails(fromDate, toDate, machineData){
+  $("#fromDate").html(fromDate);
+  $("#toDate").html(toDate);
+  $(".card-image").attr('src',"machines/"+machineData+".jpg");
+ } 
