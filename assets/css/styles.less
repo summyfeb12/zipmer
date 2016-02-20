@@ -1,0 +1,174 @@
+body{
+
+}
+*{
+	box-sizing: border-box;
+}
+.left{float: left;}
+.right{float: right;}
+.topText{
+	padding: 20px 30px;
+	font-weight: 600;
+	width: 100%;
+	font-size: 1.1em;
+	padding-bottom: 0px !important;
+	color: #4f5f6f;
+
+	.secondaryText{
+		font-weight: 400;
+		width: 100%;
+		font-size: 0.9em;
+		padding-bottom: 20px !important;
+		margin-top: 6px;
+		color: #4f5f6f;
+	}
+}
+@media screen and (min-width: 980px){
+	#header{
+		width: 260px;
+		.left;
+		background-color: #384655;
+		background-image: none;
+		padding: 0;
+		h1{
+			padding: 2em 0;
+		}
+	}
+	.left-desktop{
+		.left;
+	}
+	.row.\32 00\25 > *{
+		padding: 0 !important;
+	}
+	.wrapper{
+		padding: 0;
+	}
+	.row{
+		margin: 0 !important;
+		padding: 0 !important;
+		.left;
+		width: 100%;
+	}
+	h1{
+		color: #FFF;
+		font-weight: lighter;
+	}
+	#nav{
+		background-color: #384655;
+	}
+	#nav > ul > li{
+		margin-left: 0;
+		.left;
+		width: 100%;
+		a{
+			text-align: left;
+			color: #fff !important;
+			opacity: 0.6;
+		}
+	}
+	#nav > ul > li.current{
+		background: #40505f;
+		a{
+			opacity: 1;
+			font-weight: 400;
+		}
+	}
+	.machinery{
+		width: 100%;
+		background: #FFF;
+		box-shadow: 0px 0px 2px #e6e6e6;
+		border: 1px solid #E8e8e8;
+		.left;
+		position: relative;
+
+		.machine-heading{
+			width: 100%;
+			.left;
+			font-weight: 600;
+			font-size: 1em;
+			color: #4f5f6f;
+			padding: 30px;
+		}
+		ul.machine-list{
+			overflow: auto;
+			width: 100%;
+			.left;
+			margin-bottom: 0.5em;
+			li{
+				.left;
+				padding: 15px 30px;
+				width: 100%;
+				font-size: 0.9em;
+				font-weight: 400 !important;
+				input[type="checkbox"]{
+					margin-right: 10px;
+				}
+			}
+		}
+		.checkout-button{
+			width: 150px;
+			height: 40px;
+			background: #40505f;
+			position: absolute;
+			bottom: 0;
+			border-radius: 3px;
+			font-weight: 300;
+			display: block;
+		    font-size: 0.9em;
+		    color: #FFF;
+		    margin-left: 55px;
+		    bottom: 13px;
+		    border: 0;
+		    cursor: pointer;
+		}
+		&:after{
+			width: 100%;
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 30px;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+			background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+		}
+	}
+}
+.home-icon{
+	width: 18px;
+    height: 18px;
+    background: url('../../images/home.png');
+    float: left;
+    display: block;
+    margin-top: 3px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+.about-icon{
+	width: 18px;
+    height: 18px;
+    background: url('../../images/about.png');
+    float: left;
+    display: block;
+    margin-top: 4px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+.checkout-icon{
+	width: 18px;
+    height: 18px;
+    background: url('../../images/checkout.png');
+    float: left;
+    display: block;
+    margin-top: 4px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+#footer{
+	width: 1020px;
+    float: right;
+    background: rgba(0,0,0,0.05);
+    padding: 1em 0 0.2em 0;
+}
