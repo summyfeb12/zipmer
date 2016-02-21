@@ -190,4 +190,22 @@ console.log(a);
   $("#fromDate").html(fromDate);
   $("#toDate").html(toDate);
   $(".card-image").attr('src',"machines/"+machineData+".jpg");
+  $.ajax({
+    url: 'https://randomuser.me/api/',
+    dataType: 'json',
+    success: function(data){
+      console.log(data);
+      $("#uimg").attr('src',data.results[0].user.picture.medium);
+      $(".user-name").html(data.results[0].user.name.first.capitalize()+" "+data.results[0].user.name.last.capitalize());
+      $("#phno").html(data.results[0].user.cell);
+      $(".price").html("$"+getRandomInt(5000,7000));
+      // console.log();
+    }
+  });
+  String.prototype.capitalize = function() {
+      return this.charAt(0).toUpperCase() + this.slice(1);
+  }
+  function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
  } 
