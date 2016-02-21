@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	$(".left-desktop").css("width", $(window).width() - 260);
 	$("#header").css("height", $(window).height());
+
+	if($(window).height()<$(document).height()){
+		$("#header").css("height", $(document).height());		
+	}
+
 	$(".machinery").css("width", "25%");
 	$(".machinery").css("height", $(window).height());
 
