@@ -30,11 +30,13 @@ body{
 		background-color: #4c5e6f;
 		background-image: none;
 		padding: 0;
+		min-height: 100%;
 		h1{
 			padding: 2em 0;
 			background: #344555;
 		}
 		position: relative;
+		height: 100%;
 	}
 	.left-desktop{
 		.left;
@@ -67,6 +69,7 @@ body{
 			color: #fff !important;
 			opacity: 0.6;
 			font-size: 0.9em;
+			line-height: 1.75;
 		}
 	}
 	#nav > ul > li.current{
@@ -555,8 +558,125 @@ body{
     border-radius: 10px;
     margin-top: -1px;
 }
+.leaflet-popup-close-button{
+	display: none;
+}
+.leaflet-popup-content-wrapper{
+	border-radius: 4px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+	background: #3498db;
+}
+.leaflet-popup-content {
+    margin: 6px;
+    background: #3498db;
+    color: #FFF;
+    letter-spacing: 0.06em;
+}
+.leaflet-popup-tip {
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    margin: -7px auto 0;
+    background: #3498db;
+    color: #FFF;
+}
+.loader {
+  margin: -5em 0 0 -5em;
+  left: 50%;
+  top: 50%;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid #3498db;
+  border-right: 1.1em solid #3498db;
+  border-bottom: 1.1em solid #3498db;
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+  display: none;
+  z-index: 1002;
+  position: absolute;
+  &.show{
+  	display: block;
+  }
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.success-popup{
+	width: 300px;
+	height: 280px;
+	background: #FFF;
+	border-radius: 4px;
+	z-index: 1003;
+	display: none;
+	position: absolute;
+	margin: -140px 0 0 -150px;
+	left: 50%;
+	top: 50%;
 
+	&.show{
+		display: block;
+	}
 
+	.success-icon{
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		top: -40px;
+		left: 50%;
+		margin-left: -38px;
+		background-color: #3498db;
+		border-radius: 50%;
+		&:after{
+			width: 48px;
+			height: 48px;
+			content: "";
+			position: absolute;
+			background: url('../../images/tick.png');
+			margin: 17px 0 0 15px;
+		}
+	}
+	.success-top{
+		float: left;
+	    width: 100%;
+	    text-align: center;
+	    margin-top: 70px;
+	    font-size: 2em;
+	}
+	.success-message{
+		float: left;
+	    width: 100%;
+	    text-align: left;
+	    margin-top: 25px;
+	    font-size: 1em;
+	    padding: 0 20px;
+	}
+}
+.addToCal{
+	float: left;
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border: 1px solid #DDD;
+    margin-left: 30px;
+    margin-top: 18px;
+    cursor: pointer;
+    font-size: 18px;
+	.cal-icon{
+		width: 20px;
+		height: 20px;
+		float: left;
+		background-image: url('../../images/calendar-logo.png');
+		background-size: 20px 20px;
+		margin: 2px 5px 0 0px;
+	}
+}
 @-webkit-keyframes progress { 
     from { }
 
@@ -604,4 +724,25 @@ body{
     from { }
 
     to { width: 96% }
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
