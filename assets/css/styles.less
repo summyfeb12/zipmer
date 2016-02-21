@@ -66,6 +66,7 @@ body{
 			text-align: left;
 			color: #fff !important;
 			opacity: 0.6;
+			font-size: 0.9em;
 		}
 	}
 	#nav > ul > li.current{
@@ -149,6 +150,16 @@ body{
     float: left;
     display: block;
     margin-top: 4px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+.orders-icon{
+	width: 18px;
+    height: 18px;
+    background: url('../../images/orders.png');
+    float: left;
+    display: block;
+    margin-top: 3px;
     margin-right: 15px;
     margin-left: 20px;
 }
@@ -390,4 +401,207 @@ body{
 	    border: 0;
 	    cursor: pointer;
 	}
+}
+.orders-page{
+	.left;
+	width: 100%;
+	.orders-inner{
+		padding: 30px !important;
+		float: left;
+
+		h2{
+			font-weight: 300;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #e8e8e8;
+			width: 100%;
+			.left;
+			margin-bottom: 0;
+		}
+	}
+}
+.order-single{
+	float: left;
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DDD;
+
+}
+.left-order{
+	width: 70%;
+	.left;
+
+	.order-name{
+		float: left;
+	    width: 100%;
+	    padding: 15px 0;
+	    font-weight: 400;
+	    em{
+	    	font-style: normal;
+	    	color: #00B16A;
+	    	font-weight: 600;
+	    }
+	}
+	.last-seen{
+		float: right;
+	    margin-top: -50px;
+	    width: 100px;
+	    font-size: 0.8em;
+	    font-weight: 400;
+	    line-height: 1.3em;
+	    margin-right: -120px;
+	}
+	.order-shipped{
+		float: left;
+		font-weight: 400;
+	}
+	.order-delivered{
+		float: right;
+		font-weight: 400;
+	}
+	.tractor-order-icon{
+		width: 34px;
+    	height: 34px;
+		.right;
+		background: url('../../images/tractor.png');
+		background-size: 34px;
+	    margin-top: -50px;
+	    margin-right: -10px;
+
+	    &:after{
+	    	width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 7.5px 0 7.5px;
+			border-color: #344555 transparent transparent transparent;
+			position: absolute;
+			content: "";
+			margin: 32px 0 0 10px;
+	    }
+	}
+	.combine-order-icon{
+		width: 34px;
+    	height: 34px;
+		.right;
+		background: url('../../images/combine.png');
+		background-size: 34px;
+	    margin-top: -50px;
+	    margin-right: -10px;
+
+	    &:after{
+	    	width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 7.5px 0 7.5px;
+			border-color: #344555 transparent transparent transparent;
+			position: absolute;
+			content: "";
+			margin: 32px 0 0 10px;
+	    }
+	}
+}
+.right-order{
+	float: right;
+    width: 30%;
+    padding-top: 48px;
+
+	.orderFromToDate{
+		float: left;
+	    width: 100%;
+	    font-size: 0.9em;
+	    font-weight: 400;
+	    padding-left: 50px;
+	    line-height: 1.5em;
+	    margin-top: 12px;
+	}
+}
+#progressbar {
+    width: 100%;
+    height: 15px;
+    background-color: #eee;
+    margin: .6em 0;
+    border: 1px #ccc double;
+    clear: both;
+    border-radius: 10px;
+    margin-top: 55px;
+    float: left;
+}
+
+
+#progress {
+    background: #344555; /*-- Color of the bar --*/
+    height: 15px;
+    width: 0%;
+    max-width: 100%;
+    float: left;
+    -webkit-animation: progress 2s 1 forwards;
+    -moz-animation: progress 2s 1 forwards;
+    -ms-animation: progress 2s 1 forwards;
+    animation: progress 2s 1 forwards;
+    border-radius: 10px;
+    margin-top: -1px;
+}
+
+#progress2 {
+    background: #344555; /*-- Color of the bar --*/
+    height: 15px;
+    width: 0%;
+    max-width: 100%;
+    float: left;
+    -webkit-animation: progress2 2s 1 forwards;
+    -moz-animation: progress2 2s 1 forwards;
+    -ms-animation: progress2 2s 1 forwards;
+    animation: progress2 2s 1 forwards;
+    border-radius: 10px;
+    margin-top: -1px;
+}
+
+
+@-webkit-keyframes progress { 
+    from { }
+
+    to { width: 36% }
+}
+
+@-moz-keyframes progress { 
+    from { }
+
+    to { width: 36% }
+}
+
+@-ms-keyframes progress { 
+    from { }
+
+    to { width: 36% }
+}
+
+@keyframes progress { 
+    from { }
+
+    to { width: 36% }
+}
+
+
+@-webkit-keyframes progress2 { 
+    from { }
+
+    to { width: 96% }
+}
+
+@-moz-keyframes progress2 { 
+    from { }
+
+    to { width: 96% }
+}
+
+@-ms-keyframes progress2 { 
+    from { }
+
+    to { width: 96% }
+}
+
+@keyframes progress2 { 
+    from { }
+
+    to { width: 96% }
 }
