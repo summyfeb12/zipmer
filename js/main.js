@@ -1,6 +1,6 @@
 
 function main() {
-
+$(".text-center").height($(window).height());
 (function () {
    'use strict';
 
@@ -134,7 +134,7 @@ function main() {
 	new WOW().init();
 	//smoothScroll
 	smoothScroll.init();
-
+  
 
 	
 }());

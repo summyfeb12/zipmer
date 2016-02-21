@@ -13,7 +13,6 @@ $(document).ready(function(){
 	$(".machinery").css("height", $(window).height());
 
 	if(window.innerWidth<980){
-		alert("here");
 	}
 	$(".popup-grey").click(function(){
 		$(".popup-grey").removeClass("show");
